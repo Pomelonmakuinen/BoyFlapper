@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PipeSpawn : MonoBehaviour
@@ -14,18 +15,10 @@ public class PipeSpawn : MonoBehaviour
         InvokeRepeating("SpawnPrefab", 0f, spawnInterval);
     }
 
-    private System.Collections.IEnumerator SpawnPrefab()
+    private void SpawnPrefab()
     {
-        while (true) // Infinite loop to keep spawning
-        {
-            // Spawn the prefab
-            float randomY = Random.Range(minY, maxY);
-
-            // Create a new Vector2 position for the prefab to spawn
-            Vector2 spawnPosition = new Vector2(spawnXPosition, randomY);
-
-            // Instantiate the prefab at the random position
-            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-        }
+        float randomY = Random.Range(minY, maxY);
+        Vector2 spawnPosition = new Vector2(spawnXPosition, randomY);
+        Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
     }
 }

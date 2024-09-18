@@ -27,13 +27,11 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.tag == "pipe")
         {
-            Debug.Log("passed through a pipe");
             score++;
             scoreTxt.text = Convert.ToString(score);
         }
         else
         {
-            Debug.Log("Entered 2d collider");
             SceneManager.LoadScene("SampleScene");
         }
     }

@@ -464,7 +464,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.8201404
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 7690883759995259462, guid: a32e6e017e11bed46a4ed31774ed1dcf, type: 3}
-  spawnXPosition: 0
+  spawnXPosition: 10
   spawnInterval: 2
   minY: -2.75
   maxY: 2.75
