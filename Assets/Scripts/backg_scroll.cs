@@ -1,21 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class backg_scroll : MonoBehaviour
 {
-    public float scrollspeed = 1f;
+    public float speed;
 
-    public Material mat;
+    [SerializeField]
+    private Renderer bgRend;
 
-    public float offset = 0f;
-
-    private void Start()
+    void Update()
     {
-        InvokeRepeating("scroll", 0f, scrollspeed);
-    }
-
-    private void scroll()
-    {
+        bgRend.material.mainTextureOffset += new Vector2(speed * Time.deltaTime, 0);
     }
 }

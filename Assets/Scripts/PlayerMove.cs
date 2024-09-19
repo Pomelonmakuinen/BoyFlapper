@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -9,7 +8,10 @@ public class PlayerMove : MonoBehaviour
     public int score = 0;
 
     public Rigidbody2D rb2D;
+    public GameObject start;
+    public GameObject overText;
     public TextMeshProUGUI scoreTxt;
+    public AudioSource src;
 
     public bool tapped = false;
 
@@ -29,10 +31,13 @@ public class PlayerMove : MonoBehaviour
         {
             score++;
             scoreTxt.text = Convert.ToString(score);
+            src.Play();
         }
         else
         {
-            SceneManager.LoadScene("SampleScene");
+            start.SetActive(true);
+            overText.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 

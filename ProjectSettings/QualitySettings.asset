@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 5
+  m_CurrentQuality: 2
   m_QualitySettings:
   - serializedVersion: 3
     name: Very Low
@@ -158,10 +158,7 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms:
-    - Standalone
-    - Server
-    - Android
+    excludedTargetPlatforms: []
   - serializedVersion: 3
     name: High
     pixelLightCount: 2
@@ -314,16 +311,19 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
+    - Server
+    - Android
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
-    Android: 5
+    Android: 2
     Lumin: 5
     Nintendo Switch: 5
     PS4: 5
-    Server: 5
+    Server: 2
     Stadia: 5
-    Standalone: 5
+    Standalone: 2
     WebGL: 3
     Windows Store Apps: 5
     XboxOne: 5
